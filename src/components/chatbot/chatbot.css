@@ -1,0 +1,1003 @@
+/* =========================================================
+   CHATBOT - COMPLETE CSS
+========================================================= */
+
+.chatbot-window,
+.chatbot-window * {
+  box-sizing: border-box;
+}
+
+.chatbot-window img {
+  max-width: none !important;
+}
+
+
+/* =========================================================
+   FLOATING CHATBOT WRAPPER
+========================================================= */
+
+.chatbot-floating-wrapper {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 99999;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   HELP BUBBLE
+========================================================= */
+
+.chatbot-help-bubble {
+  position: absolute !important;
+
+  right: 125px !important;
+  bottom: 105px !important;
+
+  margin: 0 !important;
+
+  background: #ffffff;
+  color: #173f63;
+
+  padding: 15px 22px;
+
+  border: 1px solid #d8e7f3;
+  border-radius: 22px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+
+  white-space: nowrap;
+
+  z-index: 999999;
+
+  box-shadow:
+    0 12px 30px rgba(24, 62, 91, 0.15),
+    0 4px 12px rgba(24, 62, 91, 0.08);
+
+  animation: helpBubbleFloat 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SPEECH BUBBLE TAIL
+========================================================= */
+
+.chatbot-help-bubble::after {
+  content: "";
+
+  position: absolute;
+
+  right: -10px;
+  bottom: 18px;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #d8e7f3;
+  border-top: 1px solid #d8e7f3;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   MAIN HAMSTER BUTTON
+========================================================= */
+
+.chatbot-floating-button {
+  position: relative;
+
+  width: 118px;
+  height: 118px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 8px solid #f1eaea;
+
+  box-shadow:
+    0 15px 38px rgba(28, 67, 96, 0.20),
+    0 0 0 1px rgba(205, 222, 235, 0.8);
+
+  /*
+    IMPORTANT:
+    Main hamster moves UP and DOWN.
+  */
+  animation: chatbotHamsterFloat 2.2s ease-in-out infinite;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.chatbot-floating-button:hover {
+  animation-play-state: paused;
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 20px 48px rgba(28, 67, 96, 0.28),
+    0 0 0 2px #d3e4ef;
+}
+
+
+/* =========================================================
+   HAMSTER IMAGE
+========================================================= */
+
+.hamster-ring {
+  position: relative;
+
+  width: 101px !important;
+  height: 101px !important;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hamster-ring img {
+  width: 101px !important;
+  height: 101px !important;
+
+  min-width: 101px !important;
+  min-height: 101px !important;
+
+  max-width: 101px !important;
+  max-height: 101px !important;
+
+  object-fit: cover !important;
+
+  display: block !important;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   GOLD SPARKLES
+========================================================= */
+
+.spark {
+  position: absolute;
+
+  z-index: 20;
+
+  pointer-events: none;
+  user-select: none;
+
+  display: block;
+
+  color: #f7b928;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 5px rgba(247, 185, 40, 0.8),
+    0 0 12px rgba(247, 185, 40, 0.5),
+    0 0 20px rgba(247, 185, 40, 0.25);
+
+  transform-origin: center;
+
+  animation: chatbotSparkle 1.3s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+
+/* First sparkle */
+
+.spark-1 {
+  top: -9px;
+  left: -6px;
+
+  animation-delay: 0s;
+}
+
+
+/* Second sparkle */
+
+.spark-2 {
+  bottom: 2px;
+  right: -9px;
+
+  animation-delay: 0.65s;
+}
+
+
+/* =========================================================
+   HEARTS
+========================================================= */
+
+.heart {
+  position: absolute;
+
+  z-index: 20;
+
+  pointer-events: none;
+  user-select: none;
+
+  display: block;
+
+  color: #ff6f73;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  text-shadow:
+    0 3px 8px rgba(255, 111, 115, 0.35),
+    0 0 10px rgba(255, 111, 115, 0.15);
+
+  transform-origin: center;
+
+  animation: chatbotHeart 1.8s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+
+/* Top heart */
+
+.heart-1 {
+  top: 1px;
+  right: -9px;
+
+  animation-delay: 0.3s;
+}
+
+
+/* Bottom heart */
+
+.heart-2 {
+  bottom: 3px;
+  left: -9px;
+
+  animation-delay: 0.9s;
+}
+
+
+/* =========================================================
+   ONLINE DOT
+========================================================= */
+
+.online-dot {
+  position: absolute;
+
+  right: 2px;
+  bottom: 2px;
+
+  width: 22px;
+  height: 22px;
+
+  background: #22c55e;
+
+  border: 4px solid #ffffff;
+
+  border-radius: 50%;
+
+  z-index: 30;
+
+  box-shadow:
+    0 3px 10px rgba(34, 197, 94, 0.35);
+
+  animation: chatbotOnlinePulse 1.5s ease-in-out infinite;
+
+  will-change: transform, box-shadow;
+}
+
+
+/* =========================================================
+   ANIMATION - HAMSTER UP DOWN
+========================================================= */
+
+@keyframes chatbotHamsterFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-7px);
+  }
+
+  40% {
+    transform: translateY(-2px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  80% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* =========================================================
+   ANIMATION - SPARKLE
+========================================================= */
+
+@keyframes chatbotSparkle {
+  0% {
+    transform: scale(0.55) rotate(0deg);
+    opacity: 0.35;
+  }
+
+  20% {
+    transform: scale(1.25) rotate(12deg);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(0.8) rotate(25deg);
+    opacity: 0.55;
+  }
+
+  60% {
+    transform: scale(1.4) rotate(45deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1) rotate(20deg);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: scale(0.55) rotate(0deg);
+    opacity: 0.35;
+  }
+}
+
+
+/* =========================================================
+   ANIMATION - HEART
+========================================================= */
+
+@keyframes chatbotHeart {
+  0% {
+    transform: translateY(4px) scale(0.75) rotate(-8deg);
+    opacity: 0.45;
+  }
+
+  25% {
+    transform: translateY(-6px) scale(1.2) rotate(7deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.05) rotate(-5deg);
+    opacity: 0.85;
+  }
+
+  75% {
+    transform: translateY(-8px) scale(1.18) rotate(6deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(4px) scale(0.75) rotate(-8deg);
+    opacity: 0.45;
+  }
+}
+
+
+/* =========================================================
+   ANIMATION - ONLINE DOT
+========================================================= */
+
+@keyframes chatbotOnlinePulse {
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 0 rgba(34, 197, 94, 0.45);
+  }
+
+  50% {
+    transform: scale(1.18);
+
+    box-shadow:
+      0 0 0 7px rgba(34, 197, 94, 0.12);
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 0 rgba(34, 197, 94, 0.45);
+  }
+}
+
+
+/* =========================================================
+   ANIMATION - HELP BUBBLE
+========================================================= */
+
+@keyframes helpBubbleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* =========================================================
+   CHAT WINDOW
+========================================================= */
+
+.chatbot-window {
+  position: fixed;
+
+  right: 30px;
+  bottom: 25px;
+
+  width: 560px;
+  height: 720px;
+
+  background: #f8fafc;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  z-index: 99999;
+
+  box-shadow:
+    0 20px 60px rgba(15, 40, 65, 0.25);
+
+  border: 1px solid #d7e4ef;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   CHAT HEADER
+========================================================= */
+
+.chatbot-header {
+  height: 165px;
+  min-height: 165px;
+
+  background: #092840;
+
+  padding: 22px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.chatbot-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   HEADER AVATAR
+========================================================= */
+
+.chatbot-header-avatar {
+  width: 100px !important;
+  height: 100px !important;
+
+  min-width: 100px !important;
+  min-height: 100px !important;
+
+  border-radius: 50%;
+
+  background: white;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.chatbot-header-avatar img {
+  width: 92px !important;
+  height: 92px !important;
+
+  max-width: 92px !important;
+  max-height: 92px !important;
+
+  min-width: 92px !important;
+  min-height: 92px !important;
+
+  object-fit: cover !important;
+
+  display: block !important;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   CHAT TITLE
+========================================================= */
+
+.chatbot-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.chatbot-title-row h3 {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size: 31px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+
+.chatbot-brand p {
+  margin: 10px 0 0;
+
+  color: #b8c7d5;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   ONLINE STATUS
+========================================================= */
+
+.online-status {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 17px;
+
+  border-radius: 25px;
+
+  background: rgba(16, 185, 129, 0.20);
+
+  color: #2ee77d;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+
+.online-status span {
+  width: 10px;
+  height: 10px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.chatbot-close {
+  border: none;
+
+  background: transparent;
+
+  color: white !important;
+
+  font-size: 52px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  padding: 0 5px;
+}
+
+
+.chatbot-close:hover {
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   CHAT BODY
+========================================================= */
+
+.chatbot-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 28px 24px;
+
+  background: #f8fafc;
+}
+
+
+/* =========================================================
+   MESSAGE ROW
+========================================================= */
+
+.chat-message-row {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+
+.bot-row {
+  justify-content: flex-start;
+}
+
+
+.user-row {
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   MESSAGE AVATAR
+========================================================= */
+
+.message-avatar {
+  width: 48px !important;
+  height: 48px !important;
+
+  min-width: 48px !important;
+  min-height: 48px !important;
+
+  border-radius: 50%;
+
+  background: white;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 4px 12px rgba(30, 50, 70, 0.12);
+}
+
+
+.message-avatar img {
+  width: 44px !important;
+  height: 44px !important;
+
+  max-width: 44px !important;
+  max-height: 44px !important;
+
+  min-width: 44px !important;
+  min-height: 44px !important;
+
+  object-fit: cover !important;
+
+  display: block !important;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.chat-message {
+  max-width: 78%;
+
+  padding: 16px 20px;
+
+  border-radius: 18px;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+
+
+.bot-message {
+  background: white;
+
+  color: #294765;
+
+  border: 1px solid #d8e4ee;
+
+  border-top-left-radius: 6px;
+}
+
+
+.user-message {
+  background: #205579;
+
+  color: white;
+
+  border-top-right-radius: 6px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-actions {
+  padding: 14px 20px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  background: white;
+
+  border-top: 1px solid #dce7ef;
+}
+
+
+.quick-actions button {
+  height: 52px;
+
+  border-radius: 16px;
+
+  border: 1px solid #cddfea;
+
+  background: white;
+
+  color: #244a68;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.quick-actions button:hover {
+  background: #eef6fb;
+
+  transform: translateY(-1px);
+}
+
+
+.quick-actions button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.chatbot-input-area {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 18px 20px 22px;
+
+  background: white;
+
+  border-top: 1px solid #dce7ef;
+}
+
+
+.chatbot-input-area input {
+  flex: 1;
+
+  height: 62px;
+
+  border: 2px solid #cbddea;
+
+  border-radius: 18px;
+
+  padding: 0 20px;
+
+  font-size: 18px;
+
+  outline: none;
+
+  color: #244a68;
+}
+
+
+.chatbot-input-area input:focus {
+  border-color: #6c9fbd;
+}
+
+
+.chatbot-input-area input::placeholder {
+  color: #9aaabc;
+}
+
+
+.send-button {
+  width: 72px;
+  height: 62px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #205579;
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+
+.send-button:hover {
+  background: #174766;
+}
+
+
+.send-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .chatbot-floating-wrapper {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .chatbot-floating-button {
+    width: 86px;
+    height: 86px;
+
+    border-width: 5px;
+  }
+
+  .hamster-ring {
+    width: 74px !important;
+    height: 74px !important;
+  }
+
+  .hamster-ring img {
+    width: 74px !important;
+    height: 74px !important;
+
+    min-width: 74px !important;
+    min-height: 74px !important;
+
+    max-width: 74px !important;
+    max-height: 74px !important;
+  }
+
+  .chatbot-help-bubble {
+    display: none;
+  }
+
+  .spark {
+    font-size: 20px;
+  }
+
+  .heart {
+    font-size: 16px;
+  }
+
+  .online-dot {
+    width: 17px;
+    height: 17px;
+
+    border-width: 3px;
+  }
+
+  .chatbot-window {
+    right: 10px;
+    bottom: 10px;
+
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+
+    border-radius: 22px;
+  }
+
+  .chatbot-header {
+    height: 120px;
+    min-height: 120px;
+
+    padding: 15px;
+  }
+
+  .chatbot-header-avatar {
+    width: 70px !important;
+    height: 70px !important;
+
+    min-width: 70px !important;
+    min-height: 70px !important;
+  }
+
+  .chatbot-header-avatar img {
+    width: 65px !important;
+    height: 65px !important;
+
+    min-width: 65px !important;
+    min-height: 65px !important;
+  }
+
+  .chatbot-title-row h3 {
+    font-size: 21px;
+  }
+
+  .chatbot-brand p {
+    font-size: 15px;
+  }
+
+  .online-status {
+    font-size: 13px;
+
+    padding: 7px 10px;
+  }
+}
