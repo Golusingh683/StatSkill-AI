@@ -380,64 +380,59 @@ npm run dev
 
 The frontend will be available through the Vite development server.
 
-🔒 Security
+## 🔒 Security
 
 Sensitive credentials are intentionally excluded from the repository.
 
 The project uses:
 
-Environment variables for API keys
-.gitignore protection for .env
-Server-side Gemini API communication
-Separate frontend and backend architecture
-🚀 Future Scope
+- Environment variables for API keys
+- `.gitignore` protection for `.env`
+- Server-side Gemini API communication
+- Separate frontend and backend architecture
+
+## 🚀 Future Scope
 
 The current platform can be extended further to support the broader requirements of the SIH problem statement.
 
-Planned improvements
-🔗 iGOT Karmayogi API integration
-👤 User authentication and role-based access
-🗄️ Persistent database integration
-🎯 Advanced personalized learning paths
-📊 Administrator analytics dashboard
-📈 Long-term competency progress tracking
-🔄 Continuous reassessment
-🌐 Multilingual learning support
-☁️ Cloud deployment
-🔐 Enhanced security and role-based access control
-📚 Integration with additional government learning resources
-🧠 More advanced AI-based competency mapping
-👥 Team Leo
+Planned improvements:
 
-We are a six-member team that collaborated to design and develop StatSkill AI for Smart India Hackathon.
+- 🔗 iGOT Karmayogi API integration
+- 👤 User authentication and role-based access
+- 🗄️ Persistent database integration
+- 🎯 Advanced personalized learning paths
+- 📊 Administrator analytics dashboard
+- 🔄 Long-term competency progress tracking
+- 🌐 Multilingual learning support
+- ☁️ Cloud deployment
+- 🔐 Enhanced security and role-based access control
+- 📚 Integration with additional government learning resources
+- 🧠 More advanced AI-based competency mapping
+  
+## 👥 Team Leo
 
-Team Member Role & Contribution
-Divya Pratap Singh Frontend + Backend + AI Integration
-Vivek Rawat Backend + AI Integration
-Nazima Suri UI/UX + Frontend
-Ujjwal Tiwari Frontend + Testing
-Anuj Rajak Testing + Presentation
-Anubhav Pal Research + Documentation
-GitHub Profiles
-Divya Pratap Singh
-Vivek Rawat
-Nazima Suri
-Ujjwal Tiwari
-Anuj Rajak
-Anubhav Pal
-🏆 SIH Project Information
+We are a six-member team that collaborated to design and develop **StatSkill AI** for Smart India Hackathon 2026.
 
-Problem Statement ID: 26101
+| Team Member | Role & Contribution | GitHub |
+|---|---|---|
+| **Divya Pratap Singh** | Frontend + Backend + AI Integration | [GitHub](https://github.com/Golusingh683) |
+| **Vivek Rawat** | Backend + AI Integration | [GitHub](https://github.com/vivekxrawat) |
+| **Nazima Suri** | UI/UX + Frontend | [GitHub](https://github.com/nazima131) |
+| **Ujjwal Tiwari** | Frontend + Testing | [GitHub](https://github.com/121ujjwal) |
+| **Anuj Rajak** | Testing + Presentation | [GitHub](https://github.com/anujrajak261-stack) |
+| **Anubhav Pal** | Research + Documentation | [GitHub](https://github.com/palanubhav895) |
 
-Organization: Ministry of Statistics & Programme Implementation (MoSPI)
+## 🏆 SIH Project Information
 
-Department: Data Informatics & Innovation Division (DIID)
+| Details | Information |
+|---|---|
+| **Problem Statement ID** | 26101 |
+| **Organization** | Ministry of Statistics & Programme Implementation (MoSPI) |
+| **Department** | Data Informatics & Innovation Division (DIID) |
+| **Category** | Software |
+| **Theme** | Smart Education |
 
-Category: Software
-
-Theme: Smart Education
-
-Problem Statement
+### 📌 Problem Statement
 
 Develop an AI-enabled learning platform that identifies competency gaps, recommends personalized training through integration with the iGOT Karmayogi ecosystem, and generates quizzes and MCQs from uploaded learning materials to strengthen capacity building in India's Official Statistical System.
 
