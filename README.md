@@ -252,31 +252,50 @@ Interactive Quiz
 
 The Gemini API key is kept on the server side and is not exposed in the frontend.
 
-🏗️ System Architecture
-┌───────────────────────────────────────────────┐
-│ FRONTEND │
-│ │
-│ React + Vite │
-│ │
-│ Dashboard | Assessment | Learning | Quizzes │
-│ Profile | Gap Analysis | AI Assistant │
-└───────────────────────┬───────────────────────┘
-│
-│ HTTP / API
-▼
-┌───────────────────────────────────────────────┐
-│ BACKEND │
-│ │
-│ Node.js + Express │
-│ │
-│ API Routes | File Processing | AI Services │
-└───────────────┬───────────────────┬───────────┘
-│ │
-▼ ▼
-┌────────────────┐ ┌─────────────────┐
-│ PDF / DOCX │ │ Gemini API │
-│ Processing │ │ AI Services │
-└────────────────┘ └─────────────────┘
+## 🏗️ System Architecture
+
+StatSkill AI follows a modular frontend-backend architecture where the frontend handles the user interface and interactions, while the backend manages AI services, file processing, and API communication.
+
+```text
+                    ┌──────────────────────────┐
+                    │       StatSkill AI       │
+                    │      Web Application      │
+                    └────────────┬─────────────┘
+                                 │
+                                 ▼
+                    ┌──────────────────────────┐
+                    │        Frontend          │
+                    │     React.js + Vite      │
+                    ├──────────────────────────┤
+                    │ Dashboard                 │
+                    │ Assessment               │
+                    │ Competency Gap Analysis  │
+                    │ Learning Resources       │
+                    │ Quiz Generator            │
+                    │ AI Learning Assistant     │
+                    └────────────┬─────────────┘
+                                 │
+                            HTTP / API
+                                 │
+                                 ▼
+                    ┌──────────────────────────┐
+                    │         Backend          │
+                    │    Node.js + Express     │
+                    ├──────────────────────────┤
+                    │ API Routes               │
+                    │ File Processing           │
+                    │ Text Extraction           │
+                    │ AI Services               │
+                    └────────────┬─────────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    ▼                         ▼
+          ┌──────────────────┐      ┌──────────────────┐
+          │ PDF / DOCX       │      │   Google Gemini  │
+          │ Text Extraction  │      │      API         │
+          └──────────────────┘      └──────────────────┘
+```
+
 🛠️ Technology Stack
 Frontend
 React.js
