@@ -321,45 +321,46 @@ Git
 GitHub
 VS Code
 npm
-📁 Project Structure
+
+## 📁 Project Structure
+
+```text
 StatSkill-AI/
-│
 ├── public/
-│ ├── materials/
-│ └── screenshots/
+│   ├── materials/
+│   └── screenshots/
 │
 ├── src/
-│ ├── components/
-│ │ ├── chatbot/
-│ │ └── ...
-│ │
-│ ├── pages/
-│ │ ├── Dashboard.jsx
-│ │ ├── Assessment.jsx
-│ │ ├── QuizGenerator.jsx
-│ │ ├── Learning.jsx
-│ │ ├── CompetencyGaps.jsx
-│ │ └── Profile.jsx
-│ │
-│ ├── services/
-│ │ └── aiService.js
-│ │
-│ └── ...
+│   ├── components/
+│   │   └── chatbot/
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Assessment.jsx
+│   │   ├── QuizGenerator.jsx
+│   │   ├── Learning.jsx
+│   │   ├── CompetencyGaps.jsx
+│   │   └── Profile.jsx
+│   │
+│   └── services/
+│       └── aiService.js
 │
 ├── server/
-│ ├── index.js
-│ ├── lib/
-│ │ ├── extractText.js
-│ │ ├── geminiClient.js
-│ │ ├── validateMcqs.js
-│ │ └── pdfWorker.js
-│ │
-│ ├── .env.example
-│ └── package.json
+│   ├── lib/
+│   │   ├── extractText.js
+│   │   ├── geminiClient.js
+│   │   ├── validateMcqs.js
+│   │   └── pdfWorker.js
+│   │
+│   ├── index.js
+│   ├── .env.example
+│   └── package.json
 │
 ├── .gitignore
 ├── package.json
+├── vite.config.js
 └── README.md
+```
+
 ⚙️ Getting Started
 
 1. Clone the Repository
